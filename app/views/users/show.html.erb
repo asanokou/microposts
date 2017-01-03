@@ -4,3 +4,12 @@
     
     <%= @user.name %>
 </h1>
+
+<%= link_to "プロフィール変更" , edit_user_path(@user) %>
+
+地域:
+<%= @user.location %>
+
+プロフィール:
+<%= @user.profile %>
+
