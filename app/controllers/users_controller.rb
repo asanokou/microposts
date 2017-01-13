@@ -7,11 +7,11 @@ class UsersController < ApplicationController
   end
   
   def followings
-    @followings = @user.following_users.order(created_at: :desc)
+    @users = @user.following_users.order(created_at: :desc)
   end
   
     def followers
-    @followers = @user.follower_users.order(created_at: :desc)
+    @users = @user.follower_users.order(created_at: :desc)
     end
   
   def new
