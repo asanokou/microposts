@@ -1,10 +1,18 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :show]
+  before_action :set_user, only: [:edit, :update, :show, :followings, :followers]
   before_action :compare_user, only:[:edit, :update]
   
   def show
     @microposts = @user.microposts.order(created_at: :desc)
   end
+  
+  def followings
+    @followings = @user.following_users.order(created_at: :desc)
+  end
+  
+    def followers
+    @followers = @user.follower_users.order(created_at: :desc)
+    end
   
   def new
     @user = User.new

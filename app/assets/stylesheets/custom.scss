@@ -118,7 +118,7 @@ aside {
             padding-top: 0;
         }
         span {
-            display: black;
+            display: block;
             margin-bottom:3px;
             line-height: 1;
         }
@@ -152,7 +152,7 @@ aside {
         padding-top: 0;
     }
     .content {
-        display: black;
+        display: block;
         margin-left: 60px;
         img {
             display: block;
@@ -174,4 +174,44 @@ aside {
 aside {
     height: 100px;
     margin-bottom: 5px;
+}
+
+.followings {
+    list-style: none;
+    pading: 0;
+    li {
+        padding: 10px 0;
+        border-top: 1px solid #e8e8e8;
+    }
+    .gravatar {
+        float: left;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .user {
+        margin-top: 5em;
+        padding-top: 0;
+        display: block;
+    }
+    
+}
+
+.followers {
+    list-style: none;
+    pading: 0;
+    li {
+        padding: 10px 0;
+        border-top: 1px solid #e8e8e8;
+    }
+    .gravatar {
+        float: left;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    .user {
+        margin-top: 5em;
+        padding-top: 0;
+        display: block;
+    }
+    
 }
