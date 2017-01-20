@@ -18,6 +18,11 @@
                 <%= link_to "フォロワー", followers_user_url %></span>
             </div>
         </section>
+        <section>
+            <div id="favorite_btn">
+                <%= link_to "お気に入り一覧", favorites_user_url  %>
+            </div>
+        </section>
         <section class="user_profile">
             地域:
             <%= @user.location %>

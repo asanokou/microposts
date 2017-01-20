@@ -10,9 +10,14 @@ class UsersController < ApplicationController
     @users = @user.following_users.order(created_at: :desc)
   end
   
-    def followers
+  def followers
     @users = @user.follower_users.order(created_at: :desc)
-    end
+  end
+  
+  def show_favorites
+    @microposts = @user.favorite_microposts.order(created_at: :des)
+  end
+    
   
   def new
     @user = User.new
