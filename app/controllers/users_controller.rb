@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :show, :followings, :followers]
+  before_action :set_user, only: [:edit, :update, :show, :followings, :followers, :favorites]
   before_action :compare_user, only:[:edit, :update]
   
   def show
@@ -14,8 +14,8 @@ class UsersController < ApplicationController
     @users = @user.follower_users.order(created_at: :desc)
   end
   
-  def show_favorites
-    @microposts = @user.favorite_microposts.order(created_at: :des)
+  def favorites
+    @microposts = @user.favorite_microposts.order(created_at: :desc)
   end
     
   
