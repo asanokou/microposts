@@ -10,11 +10,11 @@
         </section>
         <section>
             <div id="following_btn">
-            <span><%= current_user.following_users.count %>
+            <span><%= current_user.following_users.count if current_user %>
             <%= link_to "フォロー", followings_user_url %></span>
             </div>
             <div id="folloer_btn">
-                <span><%= current_user.follower_users.count %>
+                <span><%= current_user.follower_users.count if current_user %>
                 <%= link_to "フォロワー", followers_user_url %></span>
             </div>
         </section>
